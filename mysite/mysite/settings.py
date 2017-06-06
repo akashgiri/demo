@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'fcm_django',
     'corsheaders',
+    'update_api'
 ]
 
 MIDDLEWARE = [
@@ -81,8 +82,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mynotifications',
+        'USER': 'mynotify',
+        'PASSWORD': 'pass123',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -127,7 +132,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 FCM_DJANGO_SETTINGS = {
-        "FCM_SERVER_KEY": "AAAAUBWqdfo:APA91bEm3ib6_TlLIJ5YpAU6BjyQ7X9GoXeghkgqiBwNPPkr_FP9NjdhVk8EZqCUvgWUIf2vhk5eUnSkJELy7JtJfv1qOGM_UZtxu0FI3BkpUQMxdX-aO3xdvfTKteAkbAc2vXy1xCXu"
+    #"FCM_SERVER_KEY": "AAAAUBWqdfo:APA91bEm3ib6_TlLIJ5YpAU6BjyQ7X9GoXeghkgqiBwNPPkr_FP9NjdhVk8EZqCUvgWUIf2vhk5eUnSkJELy7JtJfv1qOGM_UZtxu0FI3BkpUQMxdX-aO3xdvfTKteAkbAc2vXy1xCXu"
+    "FCM_SERVER_KEY": "AAAAzEVAfzw:APA91bEHfccunAP9lOiBgurtxj9_xo9nD8BSNMz8M-rs_22OmYqM-v1sRV2LuMS4b3yLdbxOoz74Mn57LzaTdidy3-ooHqxC8bo9qfd-ZbqNkSPUf-QyKizoEqcyndJYfNtn_VSRePN-"
 }
 
 CORS_ORIGIN_ALLOW_ALL = True

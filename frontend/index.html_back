@@ -23,8 +23,8 @@ limitations under the License.
   <!-- Material Design Theming -->
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>  
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+1
   <link rel="stylesheet" href="main.css">
 
   <link rel="manifest" href="/manifest.json">
@@ -42,11 +42,6 @@ limitations under the License.
   </header>
 
   <main class="mdl-layout__content mdl-color--grey-100">
-<div class="mydiv" style="
-    height: 100px;
-    background: red;
-    margin: 20px;
-"></div>
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
 
       <!-- Container for the Table of content -->
@@ -85,7 +80,6 @@ limitations under the License.
         4. Replace the following initialization code with the code from the Firebase console:
 -->
 <!-- START INITIALIZATION CODE -->
-<!--
 <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -95,20 +89,6 @@ limitations under the License.
     databaseURL: "https://fcm-test-88425.firebaseio.com",
     storageBucket: "fcm-test-88425.appspot.com",
     messagingSenderId: "343960876538"
-  };
-  firebase.initializeApp(config);
-</script>
--->
-<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBZh7q91-OPeGekZVt9rDq0yyKncWUpUD0",
-    authDomain: "notifications-6ee5c.firebaseapp.com",
-    databaseURL: "https://notifications-6ee5c.firebaseio.com",
-    projectId: "notifications-6ee5c",
-    storageBucket: "notifications-6ee5c.appspot.com",
-    messagingSenderId: "877335183164"
   };
   firebase.initializeApp(config);
 </script>
@@ -158,7 +138,6 @@ limitations under the License.
     // Update the UI to include the received message.
     appendMessage(payload);
     // [END_EXCLUDE]
-    $("body").addClass("message-received");
   });
   // [END receive_message]
 
@@ -333,53 +312,8 @@ limitations under the License.
     showHideDiv(tokenDivId, false);
     showHideDiv(permissionDivId, true);
   }
-  
+
   resetUI();
-
-  /*
-  $(function() {
-    $('.mydiv').on('click', function () {
-      fetch('http://localhost:8000/notifications/?format=json', {
-        method: "get",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-      }).then(function(response) {
-        console.log("response: "+JSON.stringify(response));
-      });          
-    });
-  });
-  */
-
-  $(function() {
-
-  $('.mydiv').on('click', function () {
-  var data = JSON.stringify({
-    "title": "This will prbbly be my lst post.",
-    "read_status": true
-  });
-
-  $.ajax({
-  url: 'http://localhost:8000/notifications/',
-  type: 'POST',
-  contentType: 'application/json',
-  data: data,
-  dataType: 'json'
-  });
-  });
-
-  /*$.ajax({
-       url: "http://localhost:8000/notifications/?format=json",
-       type: "GET",
-       "content-type": 'application/json',
-       success: function(response) {
-        console.log("response: "+JSON.stringify(response));
-      },
-      error: function(error) {
-        console.log("error: "+error);          
-      }
-    });*/
-  });
 </script>
 </body>
 </html>

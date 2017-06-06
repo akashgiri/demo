@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^docs/', include_docs_urls(title='FCM django web demo')),
     url(r'^', include(router.urls)),
+    url(r'^', include('update_api.urls')),
 ]
