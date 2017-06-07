@@ -79,3 +79,10 @@ License
 -------
 
 © Google, 2016. Licensed under an [Apache-2](../LICENSE) license.
+
+
+<span style="
+    align-items: left;
+"><img src="study-icon-32.png" style="
+    width: 32px;
+"></span>

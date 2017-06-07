@@ -2,9 +2,7 @@ from rest_framework import serializers
 from .models import Notifications
 
 class NotificationSerializer(serializers.ModelSerializer):
-    """Serializer to map the Model instance into JSON format."""
 
     class Meta:
-        """Meta class to map serializer's fields with the model fields."""
         model = Notifications
         fields = ('id', 'title', 'read_status')

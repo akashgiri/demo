@@ -18,13 +18,15 @@ limitations under the License.
 <head>
   <meta charset=utf-8/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firebase Cloud Messaging Example</title>
+  <title>NotifyMe</title>
 
   <!-- Material Design Theming -->
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>  
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="main.css">
 
   <link rel="manifest" href="/manifest.json">
@@ -33,6 +35,7 @@ limitations under the License.
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
   <!-- Header section containing title -->
+  <!--
   <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
@@ -40,19 +43,74 @@ limitations under the License.
       </div>
     </div>
   </header>
-
+  -->
   <main class="mdl-layout__content mdl-color--grey-100">
-<div class="mydiv" style="
-    height: 100px;
-    background: red;
-    margin: 20px;
-"></div>
-    <select id="myselect">
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-    </select>
+
+<nav class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">Brand</a>
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+        </ul>
+	<!--
+        <form class="navbar-form navbar-left">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+        </form>
+	-->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+		      <a href="#">
+			<img src="study-icon-32.png" style="width: 32px;">
+			<span style="align-items: left;">Inbox</span>
+		      </a>
+		    </li>
+                    <li class="divider"></li>
+                    <li>
+		      <a href="#">
+			<img src="study-icon-32.png" style="width: 32px;">
+			<span style="align-items: left;">Drafts</span>
+		      </a>
+		    </li>
+                    <li class="divider"></li>
+                    <li>
+		      <a href="#">
+			<img src="study-icon-32.png" style="width: 32px;">
+			<span style="align-items: left;">Drafts</span>
+		      </a>
+		    </li>
+                    <li class="divider"></li>
+                </ul>
+            </li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="list-unstyled">
+    <li class="init">[SELECT]</li>
+    <li data-value="value 1">Option 1</li>
+    <li data-value="value 2">Option 2</li>
+    <li data-value="value 3">Option 3</li>
+</ul>
+
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
 
       <!-- Container for the Table of content -->
