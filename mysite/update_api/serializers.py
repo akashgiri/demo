@@ -7,4 +7,4 @@ class NotificationSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Notifications
-        fields = ('title', 'read_status')
+        fields = ('id', 'title', 'read_status')

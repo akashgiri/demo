@@ -47,6 +47,12 @@ limitations under the License.
     background: red;
     margin: 20px;
 "></div>
+    <select id="myselect">
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+    </select>
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
 
       <!-- Container for the Table of content -->
@@ -360,11 +366,11 @@ limitations under the License.
   });
 
   $.ajax({
-  url: 'http://localhost:8000/notifications/',
-  type: 'POST',
-  contentType: 'application/json',
-  data: data,
-  dataType: 'json'
+    url: 'http://localhost:8000/notifications/',
+    type: 'POST',
+    contentType: 'application/json',
+    data: data,
+    dataType: 'json'
   });
   });
 
